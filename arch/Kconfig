@@ -74,6 +74,8 @@ config SH
 	select HAVE_PRIVATE_LIBGCC
 	select SUPPORT_OF_CONTROL
 
+endchoice
+
 config SYS_ARCH
 	string
 	help
