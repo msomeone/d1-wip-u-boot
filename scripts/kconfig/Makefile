@@ -19,7 +19,7 @@ Kconfig := Kconfig
 endif
 
 ifeq ($(quiet),silent_)
-silent := -s
+silent := 
 endif
 
 # We need this, in case the user has it in its environment
