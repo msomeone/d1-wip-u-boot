@@ -69,83 +69,6 @@ config RISCV
 	imply SPL_SERIAL
 	imply SPL_TIMER
 
-config SANDBOX
-	bool "Sandbox"
-	select ARCH_SUPPORTS_LTO
-	select BOARD_LATE_INIT
-	select BZIP2
-	select CMD_POWEROFF
-	select DM
-	select DM_FUZZING_ENGINE
-	select DM_GPIO
-	select DM_I2C
-	select DM_KEYBOARD
-	select DM_MMC
-	select DM_SERIAL
-	select DM_SPI
-	select DM_SPI_FLASH
-	select GZIP_COMPRESSED
-	select LZO
-	select OF_BOARD_SETUP
-	select PCI_ENDPOINT
-	select SPI
-	select SUPPORT_OF_CONTROL
-	select SYSRESET_CMD_POWEROFF
-	select SYS_CACHE_SHIFT_4
-	select IRQ
-	select SUPPORT_EXTENSION_SCAN
-	select SUPPORT_ACPI
-	imply BITREVERSE
-	select BLOBLIST
-	imply LTO
-	imply CMD_DM
-	imply CMD_EXCEPTION
-	imply CMD_GETTIME
-	imply CMD_HASH
-	imply CMD_IO
-	imply CMD_IOTRACE
-	imply CMD_LZMADEC
-	imply CMD_SF
-	imply CMD_SF_TEST
-	imply CRC32_VERIFY
-	imply FAT_WRITE
-	imply FIRMWARE
-	imply FUZZING_ENGINE_SANDBOX
-	imply HASH_VERIFY
-	imply LZMA
-	imply TEE
-	imply AVB_VERIFY
-	imply LIBAVB
-	imply CMD_AVB
-	imply PARTITION_TYPE_GUID
-	imply SCP03
-	imply CMD_SCP03
-	imply UDP_FUNCTION_FASTBOOT
-	imply VIRTIO_MMIO
-	imply VIRTIO_PCI
-	imply VIRTIO_SANDBOX
-	imply VIRTIO_BLK
-	imply VIRTIO_NET
-	imply DM_SOUND
-	imply PCI_SANDBOX_EP
-	imply PCH
-	imply PHYLIB
-	imply DM_MDIO
-	imply DM_MDIO_MUX
-	imply ACPI_PMC
-	imply ACPI_PMC_SANDBOX
-	imply CMD_PMC
-	imply CMD_CLONE
-	imply SILENT_CONSOLE
-	imply BOOTARGS_SUBST
-	imply PHY_FIXED
-	imply DM_DSA
-	imply CMD_EXTENSION
-	imply KEYBOARD
-	imply PHYSMEM
-	imply GENERATE_ACPI_TABLE
-	imply BINMAN
-
 config SH
 	bool "SuperH architecture"
 	select HAVE_PRIVATE_LIBGCC
@@ -288,7 +211,6 @@ config TPL_SKIP_LOWLEVEL_INIT_ONLY
 	  normal CP15 init (such as enabling the instruction cache) is still
 	  performed.
 
-source "arch/sandbox/Kconfig"
 source "arch/sh/Kconfig"
 source "arch/riscv/Kconfig"
 
